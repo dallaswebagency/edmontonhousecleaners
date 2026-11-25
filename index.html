@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krinkle Klean | House Cleaning &amp; Maid Service in Edmonton</title>
+<meta name="description" content="Edmonton’s trusted house cleaning and maid service. Standard, deep and move-in / move-out cleaning in Edmonton, Sherwood Park, St. Albert and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEEFF1;
+  --graphite:#26282C;
+  --graphite-2:#1D1F22;
+  --slate:#4A4D53;
+  --mist:#D5D8DD;
+  --soft:#6B6F76;
+  --white:#FFFFFF;
+  --oak:#9A6A43;
+  --serif:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
+  --sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --wrap:1240px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--graphite);background:var(--white);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oak);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 48px);margin-inline:auto}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--graphite);color:#C9CCD1;font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:9px 0;flex-wrap:wrap}
+.topbar a{text-decoration:none;color:#fff}
+.topbar a:hover{text-decoration:underline}
+.topbar .tb-left,.topbar .tb-right{display:flex;gap:28px;flex-wrap:wrap}
+.tb-item{display:inline-flex;align-items:center;gap:8px}
+.tb-item svg{width:15px;height:15px;stroke:#9EA3AA;fill:none;stroke-width:1.6}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--mist)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px}
+.brand img{width:250px;height:auto}
+.badges img,.about-img img{height:auto}
+nav.main ul{list-style:none;display:flex;gap:34px;margin:0;padding:0}
+nav.main a{text-decoration:none;font-weight:500;font-size:15.5px;color:var(--slate);position:relative;padding:6px 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--graphite);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+nav.main a:hover::after,nav.main a[aria-current]::after{transform:scaleX(1)}
+nav.main a[aria-current]{color:var(--graphite)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:15.5px;text-decoration:none;padding:15px 26px;border:1.5px solid var(--graphite);transition:background .25s,color .25s}
+.btn-dark{background:var(--graphite);color:#fff}
+.btn-dark:hover{background:#fff;color:var(--graphite)}
+.btn-line{background:transparent;color:var(--graphite)}
+.btn-line:hover{background:var(--graphite);color:#fff}
+.btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+.menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.menu-toggle span{display:block;width:26px;height:2px;background:var(--graphite);margin:6px 0;transition:transform .3s,opacity .3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--paper);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center;padding:72px 0 0}
+.hero-copy{padding-bottom:72px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(50px,7.2vw,104px);line-height:.98;letter-spacing:-.015em;margin:0}
+.hero h1 .l1{display:block;overflow:hidden}
+.hero h1 .l1 span{display:inline-block;transform:translateY(105%);animation:rise 1s cubic-bezier(.2,.7,.2,1) .15s forwards}
+.klean-box{display:inline-block;margin-top:22px;background:var(--graphite);color:#fff;font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.25vw,30px);letter-spacing:.32em;padding:12px 6px 12px 22px;clip-path:inset(0 100% 0 0);animation:wipe .9s cubic-bezier(.7,0,.2,1) .75s forwards}
+.hero-copy p.lede{font-size:19px;max-width:30em;color:var(--slate);margin:34px 0 36px;opacity:0;animation:fade .8s ease 1.2s forwards}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;opacity:0;animation:fade .8s ease 1.35s forwards}
+.badges{display:flex;align-items:center;gap:22px;margin-top:48px;padding-top:28px;border-top:1px solid var(--mist);opacity:0;animation:fade .8s ease 1.5s forwards}
+.badges img{height:74px;width:auto}
+.badges .bbb{height:64px}
+.badges p{margin:0;font-size:14px;line-height:1.45;color:var(--soft);max-width:15em}
+.badges strong{color:var(--graphite);font-weight:600}
+
+.hero-photo{position:relative;align-self:end;height:100%;min-height:640px}
+.photo-frame{position:absolute;inset:0 0 0 0;overflow:hidden;background:#d9d6d0}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(.75) brightness(.88) contrast(1.05);animation:clear 2.4s ease 1s forwards;transform:scale(1.06);transform-origin:50% 60%}
+.crinkle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.crinkle polygon{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1);transform-box:fill-box;transform-origin:center}
+.crinkle.smooth polygon{opacity:0!important;transform:scale(.96)}
+.crinkle line{stroke:rgba(255,255,255,.55);stroke-width:.18;transition:opacity .8s ease}
+.crinkle.smooth line{opacity:0}
+.shine{position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);transform:translateX(-120%);pointer-events:none}
+.shine.go{animation:sweep 1.4s ease forwards}
+.quote-tag{position:absolute;left:-46px;bottom:56px;background:#fff;padding:22px 26px 20px;max-width:310px;box-shadow:0 18px 40px -18px rgba(38,40,44,.35);opacity:0;transform:translateY(14px);animation:tag .8s ease 2.6s forwards}
+.quote-tag p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.3;margin:0 0 10px}
+.quote-tag span{font-size:13.5px;color:var(--soft)}
+.quote-tag::before{content:"";position:absolute;right:0;top:0;border-style:solid;border-width:0 22px 22px 0;border-color:transparent var(--paper) transparent transparent;filter:drop-shadow(-2px 2px 2px rgba(0,0,0,.08))}
+.area-strip{position:absolute;right:0;top:28px;background:var(--graphite);color:#fff;font-size:13.5px;padding:10px 18px;letter-spacing:.02em;opacity:0;animation:fade .8s ease 2.8s forwards}
+
+@keyframes rise{to{transform:translateY(0)}}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes fade{to{opacity:1}}
+@keyframes clear{to{filter:none;transform:scale(1)}}
+@keyframes sweep{to{transform:translateX(120%)}}
+@keyframes tag{to{opacity:1;transform:none}}
+
+/* ---------- services ---------- */
+.services{padding:120px 0 110px}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:64px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.05;margin:0;letter-spacing:-.01em}
+.sec-head p{margin:0;color:var(--slate);max-width:32em}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.svc-list{border-top:1px solid var(--graphite)}
+.svc{border-bottom:1px solid var(--mist)}
+.svc button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:30px 0}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,36px);margin:0;line-height:1.1;transition:transform .4s ease}
+.svc .tick{width:44px;height:44px;border:1.5px solid var(--mist);display:grid;place-items:center;transition:background .3s,border-color .3s,transform .4s}
+.svc .tick svg{width:16px;height:16px;stroke:var(--graphite);fill:none;stroke-width:1.8;transition:stroke .3s,transform .4s}
+.svc.active h3{transform:translateX(10px)}
+.svc.active .tick{background:var(--graphite);border-color:var(--graphite)}
+.svc.active .tick svg{stroke:#fff;transform:rotate(90deg)}
+.svc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s ease}
+.svc.active .svc-body{grid-template-rows:1fr}
+.svc-body>div{overflow:hidden}
+.svc-body p{margin:0 0 18px;color:var(--slate);max-width:34em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;padding:0;list-style:none}
+.chips li{font-size:14px;padding:6px 12px;background:var(--paper);color:var(--slate)}
+.svc-body .more{display:inline-block;margin:0 0 30px;font-weight:600;font-size:15px}
+.svc-media{position:sticky;top:120px;aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
+.svc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.2s ease;clip-path:inset(0 0 0 0)}
+.svc-media img.on{opacity:1;transform:none}
+.svc-media .caption{position:absolute;left:0;bottom:0;background:#fff;padding:14px 20px;font-size:14px;color:var(--slate);z-index:2}
+.svc-media .fold{position:absolute;right:0;top:0;width:0;height:0;border-style:solid;border-width:0 54px 54px 0;border-color:transparent #fff transparent transparent;z-index:2}
+.svc-inline{display:none}
+
+/* ---------- about / intro ---------- */
+.about{background:var(--graphite);color:#E6E8EB;position:relative;overflow:hidden}
+.about .creases{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.about .wrap{position:relative;padding:120px 0}
+.about-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+.about-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.about-img img{width:100%;height:100%;object-fit:cover;clip-path:inset(0 100% 0 0);transition:clip-path 1.3s cubic-bezier(.7,0,.2,1)}
+.about-img.in img{clip-path:inset(0 0 0 0)}
+.about-img .since{position:absolute;right:0;bottom:0;background:#fff;color:var(--graphite);padding:16px 22px;font-family:var(--serif);font-size:15px;line-height:1.2}
+.about-img .since b{display:block;font-size:40px;font-weight:500}
+.about h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,56px);line-height:1.08;margin:0 0 26px;color:#fff}
+.about p{color:#BFC3C9;margin:0 0 18px;max-width:34em}
+.about .lead-in{font-size:19px;color:#E6E8EB}
+.about-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.about .btn-dark{background:#fff;color:var(--graphite);border-color:#fff}
+.about .btn-dark:hover{background:transparent;color:#fff}
+.about .btn-line{color:#fff;border-color:#62666D}
+.about .btn-line:hover{background:#fff;color:var(--graphite);border-color:#fff}
+.promise{display:grid;grid-template-columns:repeat(5,1fr);margin-top:96px;border-top:1px solid #3C3F45}
+.promise div{padding:28px 24px 0 0;border-right:1px solid #3C3F45;margin-right:24px}
+.promise div:last-child{border-right:0;margin-right:0}
+.promise svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.3;margin-bottom:16px}
+.promise h4{margin:0 0 6px;font-weight:600;font-size:16px;color:#fff}
+.promise p{font-size:14.5px;margin:0;color:#A9AEB5}
+
+/* ---------- testimonials ---------- */
+.reviews{background:var(--paper);padding:120px 0}
+.rev-grid{display:grid;grid-template-columns:280px 1fr;gap:80px}
+.rev-side h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,50px);line-height:1.05;margin:0 0 34px}
+.rev-tabs{display:flex;flex-direction:column;border-top:1px solid var(--mist)}
+.rev-tabs button{all:unset;cursor:pointer;position:relative;padding:18px 0;border-bottom:1px solid var(--mist);font-weight:500;color:var(--soft);display:flex;justify-content:space-between;align-items:center}
+.rev-tabs button[aria-selected="true"]{color:var(--graphite)}
+.rev-tabs button .bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--graphite)}
+.rev-tabs button[aria-selected="true"] .bar{animation:bar 7s linear forwards}
+.rev-tabs .stars{color:var(--oak);letter-spacing:2px;font-size:13px}
+@keyframes bar{to{width:100%}}
+.rev-stage{position:relative;min-height:340px}
+.rev{margin:0;position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}
+.rev.on{opacity:1;visibility:visible;position:relative}
+.rev .mark{font-family:var(--serif);font-size:150px;line-height:.6;color:var(--mist);display:block;height:60px}
+.rev blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.7vw,36px);line-height:1.32;letter-spacing:-.005em}
+.rev cite{display:block;margin-top:28px;font-style:normal;font-weight:600}
+.rev cite span{font-weight:400;color:var(--soft)}
+
+/* ---------- faq + areas ---------- */
+.faq{padding:120px 0}
+.faq-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:start}
+.faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.8vw,52px);line-height:1.06;margin:0 0 40px}
+details{border-top:1px solid var(--mist)}
+details:last-of-type{border-bottom:1px solid var(--mist)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;font-weight:600;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:20px;height:20px;position:relative}
+summary .pm::before,summary .pm::after{content:"";position:absolute;left:0;top:9px;width:20px;height:1.6px;background:var(--graphite);transition:transform .35s}
+summary .pm::after{transform:rotate(90deg)}
+details[open] summary .pm::after{transform:rotate(0)}
+details .ans{padding:0 48px 26px 0;color:var(--slate);margin:0}
+.areas{position:sticky;top:120px;background:var(--graphite);color:#fff;padding:40px 36px 36px}
+.areas h3{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 8px;line-height:1.1}
+.areas>p{color:#B7BBC1;font-size:15px;margin:0 0 26px}
+.route{list-style:none;margin:0;padding:0 0 0 22px;position:relative;columns:2;column-gap:18px}
+.route li{position:relative;padding:5px 0;font-size:15px;break-inside:avoid}
+.route li::before{content:"";position:absolute;left:-22px;top:13px;width:9px;height:9px;border:1.5px solid #fff;background:var(--graphite);border-radius:50%}
+.areas .call{display:flex;align-items:center;justify-content:space-between;margin-top:30px;padding-top:22px;border-top:1px solid #3C3F45;text-decoration:none}
+.areas .call span{font-size:14px;color:#B7BBC1}
+.areas .call b{font-family:var(--serif);font-size:24px;font-weight:500}
+
+/* ---------- contact band ---------- */
+.inquire{background:var(--paper);border-top:1px solid var(--mist)}
+.inquire .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;padding:90px 0}
+.inquire h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.12;margin:0}
+.inq-links{display:grid;gap:0}
+.inq-links a{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid var(--mist);text-decoration:none;transition:padding .3s ease}
+.inq-links a:first-child{border-top:1px solid var(--graphite)}
+.inq-links a:hover{padding-left:12px}
+.inq-links small{color:var(--soft);font-size:14px}
+.inq-links strong{font-weight:600;font-size:18px;text-align:right}
+
+/* ---------- footer ---------- */
+footer{background:var(--graphite-2);color:#AEB2B8;font-size:15px}
+footer .wrap{padding:80px 0 0}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px}
+.f-top img{width:240px;height:auto;margin-bottom:22px}
+.f-top h5{color:#fff;font-size:15px;font-weight:600;margin:0 0 16px}
+.f-top ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.f-top a{text-decoration:none}
+.f-top a:hover{color:#fff;text-decoration:underline}
+.f-top p{margin:0 0 10px}
+.f-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #33363B;padding:24px 0 30px;font-size:14px}
+.f-bottom a{color:#fff}
+
+/* ---------- reveal (images only) ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+  .crinkle{display:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  nav.main ul{gap:22px}
+  .brand img{width:210px}
+  .promise{grid-template-columns:repeat(3,1fr);row-gap:28px}
+  .promise div:nth-child(3){border-right:0;margin-right:0}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .topbar .tb-right{display:none}
+  nav.main{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--mist);transform:translateY(-8px);opacity:0;visibility:hidden;transition:transform .35s ease,opacity .35s ease,visibility .35s}
+  nav.main.open{transform:none;opacity:1;visibility:visible}
+  nav.main ul{flex-direction:column;gap:0;padding:8px 24px 20px}
+  nav.main a{display:block;padding:14px 0;border-bottom:1px solid var(--paper)}
+  .menu-toggle{display:block}
+  header.site .btn{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:0;padding-top:48px}
+  .hero-copy{padding-bottom:48px}
+  .hero-photo{min-height:520px;margin:0 -24px}
+  .quote-tag{left:24px;bottom:24px;max-width:280px}
+  .sec-head,.svc-grid,.about-top,.rev-grid,.faq-grid,.inquire .wrap{grid-template-columns:1fr;gap:40px}
+  .svc-media{display:none}
+  .svc-inline{display:block;aspect-ratio:4/3;object-fit:cover;width:100%;margin:0 0 22px}
+  .areas{position:relative;top:0}
+  .rev-stage{min-height:0}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 36px)}
+  .brand img{width:180px}
+  header.site .wrap{height:72px}
+  .topbar .tb-left{gap:16px}
+  .topbar .tb-hide{display:none}
+  .klean-box{letter-spacing:.22em;padding-left:16px}
+  .badges{gap:14px;flex-wrap:wrap}
+  .badges img{height:60px}
+  .badges .bbb{height:52px}
+  .hero-photo{min-height:440px;margin:0 -18px}
+  .quote-tag p{font-size:18px}
+  .services,.reviews,.faq{padding:84px 0}
+  .about .wrap{padding:84px 0}
+  .promise{grid-template-columns:1fr 1fr;margin-top:64px}
+  .promise div{border-right:0;margin-right:0}
+  .route{columns:1}
+  .f-top{grid-template-columns:1fr}
+  .inq-links a{flex-direction:column;align-items:flex-start;gap:2px}
+  .inq-links strong{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span class="tb-item tb-hide"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mon – Fri, 8:30 am – 5:30 pm</span>
+      <a class="tb-item" href="mailto:info@krinkleklean.ca"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg>info@krinkleklean.ca</a>
+    </div>
+    <div class="tb-right">
+      <span class="tb-item"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>10748 44 Street, Edmonton, AB</span>
+      <a class="tb-item" href="tel:7802376571"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(780) 237-6571</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://edmontonhousecleaners.com/" aria-label="Krinkle Klean home"><img src="images/krinkle-klean-logo.png" alt="Krinkle Klean" width="784" height="80"></a>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <ul>
+        <li><a href="https://edmontonhousecleaners.com/" aria-current="page">Home</a></li>
+        <li><a href="https://edmontonhousecleaners.com/cleaning-services">Cleaning Services</a></li>
+        <li><a href="https://edmontonhousecleaners.com/about-us">About Us</a></li>
+        <li><a href="https://edmontonhousecleaners.com/faqs">FAQs</a></li>
+        <li><a href="https://edmontonhousecleaners.com/contact-us">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-dark" href="tel:7802376571"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(780) 237-6571</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1><span class="l1"><span>Simplify</span></span><span class="l1"><span>your life.</span></span></h1>
+      <div class="klean-box">BEAUTIFY YOUR HOME</div>
+      <p class="lede">Our residential cleaners don’t cut corners, we clean them. Serving Edmonton, Sherwood Park, and greater.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-dark" href="https://edmontonhousecleaners.com/contact-us">Contact us now</a>
+        <a class="btn btn-line" href="tel:7802376571"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(780) 237-6571</a>
+      </div>
+      <div class="badges">
+        <img src="images/badge-threebest-2024.png" alt="ThreeBest Rated – Best Business of 2024, Krinkle Klean Ltd." width="360" height="321">
+        <img src="images/badge-best-in-edmonton.png" alt="Best in Edmonton badge" width="360" height="360">
+        <img class="bbb" src="images/badge-bbb-accredited.png" alt="BBB Accredited Business" width="81" height="130">
+        <p><strong>BBB rating: A+</strong><br>Edmonton’s trusted house cleaning &amp; maid service for over 20 years.</p>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="images/hero-living-room.jpg" alt="A bright, freshly cleaned living room with a white sofa and hardwood floors" width="1050" height="1400">
+        <svg class="crinkle" id="crinkle" viewBox="0 0 100 130" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="shine" id="shine"></div>
+      </div>
+      <div class="area-strip">Serving Edmonton, Sherwood Park &amp; St. Albert</div>
+      <figure class="quote-tag">
+        <p>“Nothing beats walking into a Krinkle Kleaned home!”</p>
+        <span>Lisa, Krinkle Klean client</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Our house cleaning and maid services</h2>
+      <p>We provide a custom cleaning and maid service in Edmonton, Sherwood Park, St. Albert and all surrounding areas. All cleaning details are discussed and customized to your needs prior to our arrival.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-list">
+        <div class="svc active" data-i="0">
+          <button aria-expanded="true"><h3>Standard Cleaning</h3><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></button>
+          <div class="svc-body"><div>
+            <img class="svc-inline" src="images/service-standard.jpg" alt="Living room after a standard cleaning" loading="lazy">
+            <p>If you are looking for regularly scheduled cleaning or maid services or a one time fix, we would be happy to schedule you in.</p>
+            <ul class="chips"><li>Weekly</li><li>Bi-Weekly</li><li>Monthly</li><li>Occasional</li></ul>
+          </div></div>
+        </div>
+        <div class="svc" data-i="1">
+          <button aria-expanded="false"><h3>Deep Cleaning</h3><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></button>
+          <div class="svc-body"><div>
+            <img class="svc-inline" src="images/service-deep.jpg" alt="Home receiving a deep cleaning" loading="lazy">
+            <p>Spring, fall, summer, or winter, if you find yourself finding it hard to catch up to those hard-to-reach places, our residential cleaners have you covered.</p>
+            <ul class="chips"><li>Baseboards &amp; Trim</li><li>Light Fixtures</li><li>Ceiling Fans</li><li>Washing Walls</li><li>Behind Appliances</li><li>Interior Cabinets</li></ul>
+          </div></div>
+        </div>
+        <div class="svc" data-i="2">
+          <button aria-expanded="false"><h3>Move-in / Move-out Cleaning</h3><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></button>
+          <div class="svc-body"><div>
+            <img class="svc-inline" src="images/service-move-in-out.jpg" alt="Empty home ready for move-in" loading="lazy">
+            <p>Same house cleaning services as the full Deep Cleaning Package, but the house is empty.</p>
+            <ul class="chips"><li>Move-in</li><li>Move-out</li></ul>
+          </div></div>
+        </div>
+        <a class="btn btn-line" style="margin-top:36px" href="https://edmontonhousecleaners.com/cleaning-services">View cleaning services</a>
+      </div>
+      <div class="svc-media" aria-hidden="true">
+        <img class="on" src="images/service-standard.jpg" alt="">
+        <img src="images/service-deep.jpg" alt="" loading="lazy">
+        <img src="images/service-move-in-out.jpg" alt="" loading="lazy">
+        <span class="fold"></span>
+        <span class="caption" id="svcCap">Weekly, Bi-Weekly, Monthly, Occasional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <svg class="creases" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <g stroke="#34373C" stroke-width="1" fill="none">
+      <path d="M0 140 L420 300 L760 120 L1100 360 L1440 210"/>
+      <path d="M0 620 L300 520 L640 760 L980 560 L1440 720"/>
+      <path d="M420 300 L640 760"/><path d="M760 120 L980 560"/><path d="M1100 360 L980 560"/>
+    </g>
+    <g fill="#2B2D32"><path d="M420 300 L760 120 L980 560 L640 760Z"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="about-top">
+      <div class="about-img" id="aboutImg">
+        <img src="images/about-krinkle-klean.jpg" alt="Krinkle Klean staff smiling in their company uniform" loading="lazy">
+        <div class="since">Cleaning homes since<b>2001</b></div>
+      </div>
+      <div>
+        <h2>About Krinkle Klean</h2>
+        <p class="lead-in">At Krinkle Klean, we understand that there are different standards of cleanliness. Our standard is to provide a deep clean every time.</p>
+        <p>Ashley started cleaning homes shortly after having twin girls in 2001. She quickly realized the standard level of cleaning service that was being offered by others was in desperate need of improvement.</p>
+        <p>At Krinkle Klean, our mission is to provide top-notch home cleaning services that exceed our clients’ expectations.</p>
+        <div class="about-ctas">
+          <a class="btn btn-dark" href="https://edmontonhousecleaners.com/about-us">Discover more</a>
+          <a class="btn btn-line" href="tel:7802376571">(780) 237-6571</a>
+        </div>
+      </div>
+    </div>
+    <div class="promise">
+      <div><svg viewBox="0 0 32 32"><path d="M6 26C6 14 14 6 27 5c-1 13-9 21-21 21z"/><path d="M6 26 18 14"/></svg><h4>Eco-friendly products</h4><p>Environmentally friendly products in your home, every time.</p></div>
+      <div><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="16"/><path d="M5 13h22M5 18h22M5 23h22"/></svg><h4>Antibacterial microfiber</h4><p>Friendly for all surfaces.</p></div>
+      <div><svg viewBox="0 0 32 32"><path d="M16 4 6 8v8c0 6 4 10 10 12 6-2 10-6 10-12V8z"/><path d="m11 16 4 4 6-7"/></svg><h4>Bonded &amp; insured</h4><p>Clear criminal record checks and company liability insurance.</p></div>
+      <div><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="m11 16 4 4 6-7"/></svg><h4>WCB good standing</h4><p>With the Workers’ Compensation Board.</p></div>
+      <div><svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20"/><path d="M5 13h22M11 4v6M21 4v6"/></svg><h4>Your schedule</h4><p>Weekly, bi-weekly, monthly, occasional or one-time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap rev-grid">
+    <div class="rev-side">
+      <h2>Client testimonials</h2>
+      <div class="rev-tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-r="0">Shelley <span class="stars">★★★★★</span><span class="bar"></span></button>
+        <button role="tab" aria-selected="false" data-r="1">Lisa <span class="stars">★★★★★</span><span class="bar"></span></button>
+        <button role="tab" aria-selected="false" data-r="2">Louise <span class="stars">★★★★★</span><span class="bar"></span></button>
+      </div>
+    </div>
+    <div class="rev-stage">
+      <figure class="rev on"><span class="mark">“</span><blockquote>I have used other cleaning companies in Edmonton, but none compare with the professional attitude and efficiency of Krinkle Klean. They are always consistent and I am always pleased with the results.</blockquote><cite>Shelley<span>, Krinkle Klean client</span></cite></figure>
+      <figure class="rev"><span class="mark">“</span><blockquote>The Krinkle Klean company, Ashley and the staff, provide exceptional and invaluable home cleaning and maid service. Nothing beats walking into a Krinkle Kleaned home!</blockquote><cite>Lisa<span>, Krinkle Klean client</span></cite></figure>
+      <figure class="rev"><span class="mark">“</span><blockquote>Wow, thank you so much! I love my Krinkle Klean Team. We’ve never been happier with your attention to detail and the amazing job you do. I couldn’t imagine my life without you.</blockquote><cite>Louise<span>, Krinkle Klean client</span></cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faqs">
+  <div class="wrap faq-grid">
+    <div>
+      <h2>Frequently asked questions</h2>
+      <details open><summary>What are your payment options?<span class="pm"></span></summary><p class="ans">We accept Visa, Mastercard, Cash, Cheque or E-Transfer.</p></details>
+      <details><summary>Are your cleaners bonded and insured?<span class="pm"></span></summary><p class="ans">Yes, each employee has a clear criminal record check and are covered through our company liability insurance.</p></details>
+      <details><summary>Are your employees covered under WCB?<span class="pm"></span></summary><p class="ans">Yes, we continue to be in good standing with the Workers’ Compensation Board (WCB).</p></details>
+      <details><summary>What are your hours?<span class="pm"></span></summary><p class="ans">Monday – Friday 8:30 am – 5:30 pm. Evenings, weekends &amp; holidays upon request.</p></details>
+      <details><summary>Do you offer regularly scheduled cleaning packages?<span class="pm"></span></summary><p class="ans">Yes, we offer weekly, biweekly, monthly, occasional, and move-in/move-out maid service. We can also do one-time house cleaning. The 3-hour minimum applies to all bookings.</p></details>
+      <details><summary>Can I provide a key to my house? How does that work?<span class="pm"></span></summary><p class="ans">Yes, you can provide us with a key, door code, or make arrangements to meet us there each cleaning to let us in.</p></details>
+    </div>
+    <aside class="areas">
+      <h3>I live outside of Edmonton.</h3>
+      <p>We service Edmonton and the surrounding areas.</p>
+      <ul class="route">
+        <li>Edmonton</li><li>Sherwood Park</li><li>St. Albert</li><li>Beaumont</li><li>Fort Saskatchewan</li><li>Ardrossan</li><li>South Cooking Lake</li><li>Leduc</li><li>Calmar</li><li>Wizard Lake</li><li>Stony Plain</li><li>Spruce Grove</li>
+      </ul>
+      <a class="call" href="tel:7802376571"><span>Call us today!</span><b>(780) 237-6571</b></a>
+    </aside>
+  </div>
+</section>
+
+<section class="inquire">
+  <div class="wrap">
+    <h2>For online inquiries, the more information you provide, the sooner we get to cleaning.</h2>
+    <div class="inq-links">
+      <a href="https://edmontonhousecleaners.com/contact-us"><small>Free quote</small><strong>Contact us</strong></a>
+      <a href="mailto:info@krinkleklean.ca"><small>Email</small><strong>info@krinkleklean.ca</strong></a>
+      <a href="tel:7802376571"><small>Phone</small><strong>(780) 237-6571</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <img src="images/krinkle-klean-logo-white.png" alt="Krinkle Klean" width="784" height="80" loading="lazy">
+        <p>Our residential cleaners don’t cut corners, we clean them. Serving Edmonton, Sherwood Park, and greater.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>10748 44 Street, Edmonton, AB T6A 1W4, Canada</p>
+        <p><a href="tel:7802376571">(780) 237-6571</a></p>
+        <p><a href="mailto:info@krinkleklean.ca">info@krinkleklean.ca</a></p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://edmontonhousecleaners.com/cleaning-services">Standard Cleaning</a></li>
+          <li><a href="https://edmontonhousecleaners.com/cleaning-services">Deep Cleaning</a></li>
+          <li><a href="https://edmontonhousecleaners.com/cleaning-services">Move-in / Move-out Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Hours</h5>
+        <p>Monday – Friday<br>8:30 am – 5:30 pm</p>
+        <p>Evenings, weekends &amp; holidays upon request</p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr">2026</span> Krinkle Klean Ltd. All rights reserved.</span>
+      <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // mobile menu
+  var t=document.querySelector('.menu-toggle'),n=document.getElementById('mainnav');
+  t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+
+  // crinkled sheet that irons itself flat over the hero photo
+  var svg=document.getElementById('crinkle'),NS='http://www.w3.org/2000/svg';
+  var cols=7,rows=9,W=100,H=130,pts=[];
+  function rnd(s){var x=Math.sin(s*9301+49297)*233280;return x-Math.floor(x);}
+  for(var r=0;r<=rows;r++){pts[r]=[];for(var c=0;c<=cols;c++){
+    var edgeX=(c===0||c===cols),edgeY=(r===0||r===rows);
+    var x=c*W/cols+(edgeX?0:(rnd(r*31+c)-.5)*W/cols*.8);
+    var y=r*H/rows+(edgeY?0:(rnd(r*17+c*7)-.5)*H/rows*.8);
+    pts[r][c]=[x,y];}}
+  var polys=[],k=0;
+  for(r=0;r<rows;r++)for(c=0;c<cols;c++){
+    var a=pts[r][c],b=pts[r][c+1],d=pts[r+1][c],e=pts[r+1][c+1];
+    var tris=rnd(k++)>.5?[[a,b,e],[a,e,d]]:[[a,b,d],[b,e,d]];
+    tris.forEach(function(tr){
+      var p=document.createElementNS(NS,'polygon');
+      p.setAttribute('points',tr.map(function(q){return q.join(',')}).join(' '));
+      var s=rnd(k*3.7+tr[0][0]),light=s>.5;
+      p.setAttribute('fill',light?'rgba(255,255,255,'+(.08+s*.28).toFixed(2)+')':'rgba(20,22,26,'+(.08+(1-s)*.32).toFixed(2)+')');
+      var cx=(tr[0][0]+tr[1][0]+tr[2][0])/3;
+      p.style.transitionDelay=(1.1+cx/W*1.3+rnd(k)*.25).toFixed(2)+'s';
+      svg.appendChild(p);polys.push(p);
+    });
+  }
+  for(var i=0;i<6;i++){var l=document.createElementNS(NS,'line');
+    l.setAttribute('x1',rnd(i*5)*W);l.setAttribute('y1',0);l.setAttribute('x2',rnd(i*11+3)*W);l.setAttribute('y2',H);
+    l.style.transitionDelay=(1.2+i*.15)+'s';svg.appendChild(l);}
+  requestAnimationFrame(function(){requestAnimationFrame(function(){svg.classList.add('smooth');});});
+  setTimeout(function(){document.getElementById('shine').classList.add('go');},3200);
+
+  // services: one active row swaps the image
+  var svcs=[].slice.call(document.querySelectorAll('.svc')),imgs=[].slice.call(document.querySelectorAll('.svc-media img')),cap=document.getElementById('svcCap');
+  var caps=['Weekly, Bi-Weekly, Monthly, Occasional','One time or regular scheduled deep cleanings','Deep Cleaning Package, empty house'];
+  svcs.forEach(function(s,i){s.querySelector('button').addEventListener('click',function(){
+    svcs.forEach(function(o,j){o.classList.toggle('active',i===j);o.querySelector('button').setAttribute('aria-expanded',i===j);});
+    imgs.forEach(function(im,j){im.classList.toggle('on',i===j);});cap.textContent=caps[i];
+  });});
+
+  // about image wipe when it enters view
+  var ai=document.getElementById('aboutImg');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(en,ob){en.forEach(function(x){if(x.isIntersecting){ai.classList.add('in');ob.disconnect();}});},{threshold:.3}).observe(ai);}else ai.classList.add('in');
+
+  // testimonials rotate
+  var tabs=[].slice.call(document.querySelectorAll('.rev-tabs button')),revs=[].slice.call(document.querySelectorAll('.rev')),cur=0,timer;
+  function show(i){cur=i;tabs.forEach(function(b,j){b.setAttribute('aria-selected',i===j);var bar=b.querySelector('.bar');bar.style.animation='none';bar.offsetWidth;bar.style.animation='';});revs.forEach(function(r,j){r.classList.toggle('on',i===j);});clearTimeout(timer);timer=setTimeout(function(){show((cur+1)%revs.length);},7000);}
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){show(i);});});
+  show(0);
+})();
+</script>
+</body>
+</html>
