@@ -88,7 +88,6 @@ nav.main a[aria-current]{color:var(--graphite)}
 .quote-tag{position:absolute;left:-46px;bottom:56px;background:#fff;padding:22px 26px 20px;max-width:310px;box-shadow:0 18px 40px -18px rgba(38,40,44,.35);opacity:0;transform:translateY(14px);animation:tag .8s ease 2.6s forwards}
 .quote-tag p{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.3;margin:0 0 10px}
 .quote-tag span{font-size:13.5px;color:var(--soft)}
-.quote-tag::before{content:"";position:absolute;right:0;top:0;border-style:solid;border-width:0 22px 22px 0;border-color:transparent var(--paper) transparent transparent;filter:drop-shadow(-2px 2px 2px rgba(0,0,0,.08))}
 .area-strip{position:absolute;right:0;top:28px;background:var(--graphite);color:#fff;font-size:13.5px;padding:10px 18px;letter-spacing:.02em;opacity:0;animation:fade .8s ease 2.8s forwards}
 
 @keyframes rise{to{transform:translateY(0)}}
@@ -120,11 +119,10 @@ nav.main a[aria-current]{color:var(--graphite)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;padding:0;list-style:none}
 .chips li{font-size:14px;padding:6px 12px;background:var(--paper);color:var(--slate)}
 .svc-body .more{display:inline-block;margin:0 0 30px;font-weight:600;font-size:15px}
-.svc-media{position:sticky;top:120px;aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
-.svc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.2s ease;clip-path:inset(0 0 0 0)}
+.svc-media{position:sticky;top:120px;aspect-ratio:4/3;overflow:hidden;background:var(--paper);border-radius:50% 50% 0 0 / 36% 36% 0 0}
+.svc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1.2s ease}
 .svc-media img.on{opacity:1;transform:none}
 .svc-media .caption{position:absolute;left:0;bottom:0;background:#fff;padding:14px 20px;font-size:14px;color:var(--slate);z-index:2}
-.svc-media .fold{position:absolute;right:0;top:0;width:0;height:0;border-style:solid;border-width:0 54px 54px 0;border-color:transparent #fff transparent transparent;z-index:2}
 .svc-inline{display:none}
 
 /* ---------- about / intro ---------- */
@@ -132,11 +130,11 @@ nav.main a[aria-current]{color:var(--graphite)}
 .about .creases{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
 .about .wrap{position:relative;padding:120px 0}
 .about-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
-.about-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.about-img{position:relative;aspect-ratio:16/9;margin-bottom:76px}
 .about-img img{width:100%;height:100%;object-fit:cover;clip-path:inset(0 100% 0 0);transition:clip-path 1.3s cubic-bezier(.7,0,.2,1)}
 .about-img.in img{clip-path:inset(0 0 0 0)}
-.about-img .since{position:absolute;right:0;bottom:0;background:#fff;color:var(--graphite);padding:16px 22px;font-family:var(--serif);font-size:15px;line-height:1.2}
-.about-img .since b{display:block;font-size:40px;font-weight:500}
+.about-img .since{position:absolute;left:0;top:100%;display:flex;align-items:baseline;gap:14px;background:#fff;color:var(--graphite);padding:16px 22px;font-family:var(--serif);font-size:15px;line-height:1.2}
+.about-img .since b{font-size:40px;font-weight:500;line-height:1}
 .about h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,56px);line-height:1.08;margin:0 0 26px;color:#fff}
 .about p{color:#BFC3C9;margin:0 0 18px;max-width:34em}
 .about .lead-in{font-size:19px;color:#E6E8EB}
@@ -246,7 +244,7 @@ footer .wrap{padding:80px 0 0}
   .quote-tag{left:24px;bottom:24px;max-width:280px}
   .sec-head,.svc-grid,.about-top,.rev-grid,.faq-grid,.inquire .wrap{grid-template-columns:1fr;gap:40px}
   .svc-media{display:none}
-  .svc-inline{display:block;aspect-ratio:4/3;object-fit:cover;width:100%;margin:0 0 22px}
+  .svc-inline{display:block;aspect-ratio:4/3;object-fit:cover;width:100%;margin:0 0 22px;border-radius:50% 50% 0 0 / 30% 30% 0 0}
   .areas{position:relative;top:0}
   .rev-stage{min-height:0}
 }
@@ -377,7 +375,6 @@ footer .wrap{padding:80px 0 0}
         <img class="on" src="images/service-standard.jpg" alt="">
         <img src="images/service-deep.jpg" alt="" loading="lazy">
         <img src="images/service-move-in-out.jpg" alt="" loading="lazy">
-        <span class="fold"></span>
         <span class="caption" id="svcCap">Weekly, Bi-Weekly, Monthly, Occasional</span>
       </div>
     </div>
